@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using ProductsMVCApplication.Models
+ @model List<Product>
+
+<html>
+    <head>
+        <title>Get Products </title>
+    </head>
+    <body>
+        @{
+        
+        List<Product> prod = this.Model;
+    }
+    <br/>
+    <ul>
+        @foreach(Product p in prod)
+        {
+            <li>@p.ProductId</li>
+             <li>@p.ProductName</li>
+              <li>@p.Price</li>
+               <li>@p.Description</li><br />
+        }
+    </ul>
+        <br/>
+       
+    </body>
+</html>

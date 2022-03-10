@@ -1,0 +1,25 @@
+﻿
+@using ProductsMVCApplication.Models 
+@model Product
+<html>
+    <head>
+        <title>Delete Product</title>
+    </head>
+    <body>
+        <h1>Delete Product</h1>
+        @using (var frm = Html.BeginForm())
+    {
+        <div>
+        @Html.LabelFor(p => p.ProductId) : &nbsp;
+        @Html.EditorFor(p => p.ProductId)&nbsp;
+        </div><br/>
+         <div>
+             <input type="submit" value="Submit" />
+        </div>
+        @if(this.ViewBag.err != null)
+        {
+            <h4>Product Doesn't exists</h4>
+        }
+    } 
+</body>
+</html>

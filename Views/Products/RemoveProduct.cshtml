@@ -1,0 +1,37 @@
+﻿
+@using ProductsMVCApplication.Models 
+@model Product
+<html>
+    <head>
+        <title>Remove Product</title>
+    </head>
+    <body>
+        <h1>Remove Product</h1>
+        @using (var frm = Html.BeginForm())
+    {
+        <div>
+        @Html.LabelFor(p => p.ProductId) : &nbsp;
+        @Html.EditorFor(p => p.ProductId)&nbsp;
+        </div><br/>
+         <div>
+        @Html.LabelFor(p => p.ProductName)  : &nbsp;
+        @Html.EditorFor(p => p.ProductName)&nbsp;
+        </div><br/>
+         <div>
+        @Html.LabelFor(p => p.Price)  : &nbsp;
+        @Html.EditorFor(p => p.Price)&nbsp;
+        </div><br/>
+         <div>
+        @Html.LabelFor(p => p.Description)  : &nbsp;
+        @Html.EditorFor(p => p.Description)&nbsp;
+        </div><br/>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+        @if(this.ViewBag.err != null)
+        {
+            <h4>Product already exists</h4>
+        }
+    } 
+</body>
+</html>

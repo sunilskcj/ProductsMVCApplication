@@ -1,0 +1,25 @@
+﻿
+@using ProductsMVCApplication.Models
+ @model Product
+
+<html>
+    <head>
+        <title>Get Products </title>
+    </head>
+    <body>
+        @{
+        
+       Product prod = this.Model;
+    }
+    <br/>
+    <ul>
+        <li>@prod.ProductId</li>
+         <li>@prod.ProductName</li>
+          <li>@prod.Price</li>
+           <li>@prod.Description</li>
+        
+    </ul>
+        <br/>
+       
+    </body>
+</html>
